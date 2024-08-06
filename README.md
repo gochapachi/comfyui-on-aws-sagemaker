@@ -1,6 +1,6 @@
-**comfyui-on-aws-sagemaker**
+# comfyui-on-aws-sagemaker
 This repo provides easy step by step process to install confyui on aws sagemaker
-**Install a separate conda installation via Miniconda**
+# Install a separate conda installation via Miniconda
 WORKING_DIR=/home/ec2-user/SageMaker
 mkdir -p "$WORKING_DIR"
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.5.2-0-Linux-x86_64.sh -O "$WORKING_DIR/miniconda.sh"
@@ -14,7 +14,7 @@ conda create --yes --name "$KERNEL_NAME" python="$PYTHON"
 conda activate "$KERNEL_NAME"
 pip install --quiet ipykernel
 
-**Install ComfyUI in the terminal.**
+# Install ComfyUI in the terminal.
 cd SageMaker
 git clone https://github.com/comfyanonymous/ComfyUI
 cd ComfyUI
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 pip install torch torchvision
 
 
-**Run ComfyUI**
+# Run ComfyUI
 1) Launch ComfyUI in Terminal 1.
 source /home/ec2-user/SageMaker/miniconda/bin/activate
 conda activate comfyui
@@ -37,7 +37,8 @@ Copy the value and run this commands:
 - Start a tunnel
 
 
-**Install ngrok will be used later while using api**
+# Install ngrok will be used later while using api
+
 source /home/ec2-user/SageMaker/miniconda/bin/activate
 conda activate comfyui
 pip install pyngrok
@@ -46,9 +47,9 @@ cp /home/ec2-user/.config/ngrok/ngrok.yml /home/ec2-user/SageMaker/ngrok.yml
 ngrok http http://localhost:8188 --basic-auth 'username:password'    or ngrok http http://localhost:8188  to continue without authentication
 [Change username and password accordingly.]
 
-**ComfyUI Start scripts after Stop and Start using Ngrok**
+# ComfyUI Start scripts after Stop and Start using Ngrok
 
-**comfyui-start.sh Script for comfyui**
+# comfyui-start.sh Script for comfyui
 
 
 source /home/ec2-user/SageMaker/miniconda/bin/activate
@@ -56,14 +57,14 @@ conda activate comfyui
 python main.py
 
 
-**comfyui-ngrok-start.sh script for ngrok and ssl**
+# comfyui-ngrok-start.sh script for ngrok and ssl
 source /home/ec2-user/SageMaker/miniconda/bin/activate
 conda activate comfyui
 cp /home/ec2-user/SageMaker/ngrok.yml /home/ec2-user/.ngrok2/ngrok.yml
 ngrok http http://localhost:8188/ --basic-auth 'username:password'
 
 
-**ComfyUI Manager**
+# ComfyUI Manager
 Installation
 
 # ComfyUI Manager - Installation
