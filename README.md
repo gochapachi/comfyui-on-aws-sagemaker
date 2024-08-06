@@ -1,8 +1,8 @@
 # comfyui-on-aws-sagemaker
 This repo provides easy step by step process to install confyui on aws sagemaker
 # Install a separate conda installation via Miniconda
-WORKING_DIR=/home/ec2-user/SageMaker
-mkdir -p "$WORKING_DIR"
+## WORKING_DIR=/home/ec2-user/SageMaker
+## mkdir -p "$WORKING_DIR"
 wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.5.2-0-Linux-x86_64.sh -O "$WORKING_DIR/miniconda.sh"
 bash "$WORKING_DIR/miniconda.sh" -b -u -p "$WORKING_DIR/miniconda" 
 rm -rf "$WORKING_DIR/miniconda.sh"
