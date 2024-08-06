@@ -90,7 +90,8 @@ source /home/ec2-user/SageMaker/miniconda/bin/activate
 
 conda activate comfyui
 
-python main.py
+
+python main.py (Make sure to cd into correct directly)
 
 
 # comfyui-ngrok-start.sh script for ngrok and ssl
