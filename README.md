@@ -100,6 +100,13 @@ source /home/ec2-user/SageMaker/miniconda/bin/activate
 
 conda activate comfyui
 
+mkdir -p /home/ec2-user/.config/ngrok
+
+cp /home/ec2-user/SageMaker/ngrok.yml /home/ec2-user/.config/ngrok/ngrok.yml
+
+Or
+
+Make dir in your required location.
 cp /home/ec2-user/SageMaker/ngrok.yml /home/ec2-user/.ngrok2/ngrok.yml
 
 ngrok http http://localhost:8188/ --basic-auth 'username:password'
