@@ -111,7 +111,11 @@ Installation
 
 # ComfyUI Manager - Installation
 
-cd custom_nodes
+cd custom_nodes  
+
+or
+
+cd /home/ec2-user/SageMaker/ComfyUI/custom_nodes(usually it is this make change accordingly)
 
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git
 
