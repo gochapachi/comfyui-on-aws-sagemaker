@@ -90,7 +90,7 @@ source /home/ec2-user/SageMaker/miniconda/bin/activate
 
 conda activate comfyui
 
-
+cd home/ec2-user/SageMaker/ComfyUI/
 python main.py (Make sure to cd into correct directly)
 
 
@@ -110,6 +110,12 @@ Make dir in your required location.
 cp /home/ec2-user/SageMaker/ngrok.yml /home/ec2-user/.ngrok2/ngrok.yml
 
 ngrok http http://localhost:8188/ --basic-auth 'username:password'
+
+or create a domain in ngrok dashboard for free to get a permanent link otherwise it'll change everytime
+
+you'll get something like this
+
+https://thankful-moving-scorpion.ngrok-free.app/
 
 
 
